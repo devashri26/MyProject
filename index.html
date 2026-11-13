@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy - Discover Products You'll Love</title>
+  <!-- External CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Navigation Bar
+       ======================================================================== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo.png" alt="ShopEasy Logo" class="nav-logo">
+      </a>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#cart" class="cart-link" id="cart-nav-btn">
+          <svg class="cart-icon-svg" viewBox="0 0 24 24">
+            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+          </svg>
+          Cart (<span class="cart-badge" id="nav-cart-count">0</span>)
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       2. Hero Section
+       ======================================================================== -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="hero-tag">Welcome to ShopEasy</span>
+      <h1>Discover Products You'll Love</h1>
+      <p>Explore our handpicked collection of premium gadgets, everyday accessories, and top lifestyle essentials at budget-friendly prices.</p>
+      <a href="#products" class="btn btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. Products Section (6 Featured Products)
+       ======================================================================== -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Products</h2>
+        <p class="section-subtitle">Top-rated items with free delivery and guaranteed quality</p>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <span class="product-badge">Bestseller</span>
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Wireless Bluetooth Headphones" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Wireless Bluetooth Headphones</h3>
+            <p class="product-description">Premium noise-canceling stereo sound with ultra-soft cushions and 30-hour battery life.</p>
+            <div class="product-footer">
+              <span class="product-price">$59.99</span>
+              <button class="btn btn-primary btn-add-cart" onclick="addToCart('prod-1', 'Wireless Bluetooth Headphones', 59.99, 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <span class="product-badge">Popular</span>
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Minimalist Smart Watch" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Minimalist Smart Watch</h3>
+            <p class="product-description">Fitness tracking, real-time heart rate monitoring, waterproof build, and clean modern aesthetic.</p>
+            <div class="product-footer">
+              <span class="product-price">$89.99</span>
+              <button class="btn btn-primary btn-add-cart" onclick="addToCart('prod-2', 'Minimalist Smart Watch', 89.99, 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <span class="product-badge">Sale</span>
+            <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80" alt="Ergonomic Wireless Mouse" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Ergonomic Wireless Mouse</h3>
+            <p class="product-description">Comfortable palm contour, silent click buttons, adjustable DPI settings, and long battery life.</p>
+            <div class="product-footer">
+              <span class="product-price">$29.99</span>
+              <button class="btn btn-primary btn-add-cart" onclick="addToCart('prod-3', 'Ergonomic Wireless Mouse', 29.99, 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <span class="product-badge">Trending</span>
+            <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80" alt="Ultra-Slim Mechanical Keyboard" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Ultra-Slim Mechanical Keyboard</h3>
+            <p class="product-description">Responsive mechanical switches, vibrant customizable RGB backlights, and durable aluminum body.</p>
+            <div class="product-footer">
+              <span class="product-price">$74.99</span>
+              <button class="btn btn-primary btn-add-cart" onclick="addToCart('prod-4', 'Ultra-Slim Mechanical Keyboard', 74.99, 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <span class="product-badge">New</span>
+            <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80" alt="Portable Bluetooth Speaker" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Portable Bluetooth Speaker</h3>
+            <p class="product-description">Rich 360-degree sound with deep bass, IPX7 waterproof rating, and 12 hours of continuous playback.</p>
+            <div class="product-footer">
+              <span class="product-price">$39.99</span>
+              <button class="btn btn-primary btn-add-cart" onclick="addToCart('prod-5', 'Portable Bluetooth Speaker', 39.99, 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="product-card">
+          <div class="product-image-wrapper">
+            <span class="product-badge">Recommended</span>
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80" alt="Waterproof Travel Backpack" class="product-image">
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Waterproof Travel Backpack</h3>
+            <p class="product-description">Ergonomic padded straps, dedicated 15-inch laptop compartment, and USB charging pass-through.</p>
+            <div class="product-footer">
+              <span class="product-price">$49.99</span>
+              <button class="btn btn-primary btn-add-cart" onclick="addToCart('prod-6', 'Waterproof Travel Backpack', 49.99, 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80')">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. Shopping Cart Section
+       ======================================================================== -->
+  <section class="section cart-section" id="cart">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Your Shopping Cart</h2>
+        <p class="section-subtitle">Manage your selected items and review your order before checkout</p>
+      </div>
+
+      <div class="cart-layout">
+        <!-- Cart Items List Container -->
+        <div class="cart-items-card">
+          <!-- Empty State (shown when cart has no items) -->
+          <div id="cart-empty-state" class="cart-empty" style="display: none;">
+            <span class="cart-empty-icon">&#128722;</span>
+            <h3>Your cart is empty</h3>
+            <p>Looks like you haven't added any products yet.</p>
+            <a href="#products" class="btn btn-secondary">Start Shopping</a>
+          </div>
+
+          <!-- Dynamic Cart Items injected by script.js -->
+          <div id="cart-items"></div>
+
+          <!-- Clear Cart Action Button -->
+          <div style="margin-top: 20px; text-align: right;">
+            <button class="btn btn-secondary" onclick="clearCart()" style="font-size: 0.85rem; padding: 6px 14px;">Clear Cart</button>
+          </div>
+        </div>
+
+        <!-- Order Summary Card -->
+        <div class="cart-summary-card" id="cart-summary">
+          <h3>Order Summary</h3>
+          <div class="summary-row">
+            <span>Total Items:</span>
+            <span id="cart-total-items">0</span>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal-price">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Standard Shipping:</span>
+            <span style="color: var(--success-color); font-weight: 600;">FREE</span>
+          </div>
+          <div class="summary-row total-row">
+            <span>Total:</span>
+            <span class="summary-total-price" id="cart-total-price">$0.00</span>
+          </div>
+
+          <!-- Checkout Button -->
+          <button id="checkout-btn" class="btn btn-primary btn-block">Proceed to Checkout</button>
+
+          <!-- Shopping Highlights -->
+          <div class="summary-features">
+            <span>&#10003; 30-day money-back guarantee</span>
+            <span>&#10003; Free doorstep delivery</span>
+            <span>&#10003; 100% Secure checkout simulation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. Checkout Confirmation Modal
+       ======================================================================== -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-card">
+      <div class="modal-icon">&#10004;</div>
+      <h2>Order Placed Successfully!</h2>
+      <p>Thank you for shopping with <strong>ShopEasy</strong>. Your order has been confirmed.</p>
+      
+      <div class="modal-details">
+        <p><strong>Order ID:</strong> <span id="modal-order-id">SE-12345</span></p>
+        <p><strong>Total Items:</strong> <span id="modal-order-items">0 items</span></p>
+        <p><strong>Amount Paid:</strong> <span id="modal-order-total">$0.00</span></p>
+        <p><strong>Status:</strong> Processing (Frontend Simulation)</p>
+      </div>
+
+      <button class="btn btn-primary btn-block" onclick="closeCheckoutModal()">Continue Shopping</button>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       6. Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>ShopEasy</h4>
+          <p>Your friendly online store for high-quality electronics, daily gadgets, and lifestyle essentials. Simple, reliable, and affordable.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#products">All Products</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Customer Care</h5>
+          <ul>
+            <li><a href="about.html">Our Mission</a></li>
+            <li><a href="contact.html">Support Desk</a></li>
+            <li><a href="#cart">View Cart</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ShopEasy. All rights reserved. Created for learning & academic purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
+
